@@ -111,11 +111,6 @@ class SamsungTVWS:
         payload = json.dumps(command)
         self.connection.send(payload)
 
-        if key_press_delay is None:
-            time.sleep(self.key_press_delay)
-        else:
-            time.sleep(key_press_delay)
-
     def _rest_request(self, target, method='GET'):
         url = self._format_rest_url(target)
         try:
